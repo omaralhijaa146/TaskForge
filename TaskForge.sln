@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskForge.API", "TaskForge.API\TaskForge.API.csproj", "{09A36C5C-7F7A-4025-BAAD-27812F388C00}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskForge.Domain", "TaskForge.Domain\TaskForge.Domain.csproj", "{F1058C44-FBDA-49E7-91FF-50C7A89F37AD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskForge.Application", "TaskForge.Application\TaskForge.Application.csproj", "{F634A6E9-257F-4D9B-90D4-B62120B55659}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskForge.Identity", "TaskForge.Identity\TaskForge.Identity.csproj", "{1D283A54-39F1-40EB-A16E-F52D0B2BEB24}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskForge.EntityFrameworkCore", "TaskForge.EntityFrameworkCore\TaskForge.EntityFrameworkCore.csproj", "{9326B6B9-3538-4F6D-8984-413FC32088D7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskForge.Application.Shared", "TaskForge.Application.Shared\TaskForge.Application.Shared.csproj", "{9FCC626A-0EA2-4C95-899B-7E8BC3D0B8EE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskForge.Domain.Shared", "TaskForge.Domain.Shared\TaskForge.Domain.Shared.csproj", "{932BF9F7-62A4-49BB-B27D-30C2EDB369EA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{09A36C5C-7F7A-4025-BAAD-27812F388C00}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09A36C5C-7F7A-4025-BAAD-27812F388C00}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09A36C5C-7F7A-4025-BAAD-27812F388C00}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09A36C5C-7F7A-4025-BAAD-27812F388C00}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F1058C44-FBDA-49E7-91FF-50C7A89F37AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1058C44-FBDA-49E7-91FF-50C7A89F37AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1058C44-FBDA-49E7-91FF-50C7A89F37AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1058C44-FBDA-49E7-91FF-50C7A89F37AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F634A6E9-257F-4D9B-90D4-B62120B55659}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F634A6E9-257F-4D9B-90D4-B62120B55659}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F634A6E9-257F-4D9B-90D4-B62120B55659}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F634A6E9-257F-4D9B-90D4-B62120B55659}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D283A54-39F1-40EB-A16E-F52D0B2BEB24}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D283A54-39F1-40EB-A16E-F52D0B2BEB24}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D283A54-39F1-40EB-A16E-F52D0B2BEB24}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D283A54-39F1-40EB-A16E-F52D0B2BEB24}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9326B6B9-3538-4F6D-8984-413FC32088D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9326B6B9-3538-4F6D-8984-413FC32088D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9326B6B9-3538-4F6D-8984-413FC32088D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9326B6B9-3538-4F6D-8984-413FC32088D7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9FCC626A-0EA2-4C95-899B-7E8BC3D0B8EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9FCC626A-0EA2-4C95-899B-7E8BC3D0B8EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9FCC626A-0EA2-4C95-899B-7E8BC3D0B8EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9FCC626A-0EA2-4C95-899B-7E8BC3D0B8EE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{932BF9F7-62A4-49BB-B27D-30C2EDB369EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{932BF9F7-62A4-49BB-B27D-30C2EDB369EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{932BF9F7-62A4-49BB-B27D-30C2EDB369EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{932BF9F7-62A4-49BB-B27D-30C2EDB369EA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

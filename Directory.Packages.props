@@ -1,0 +1,26 @@
+<Project>
+
+    <PropertyGroup>
+        <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
+        <CentralPackageTransitivePinningEnabled>true</CentralPackageTransitivePinningEnabled>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <!-- Application -->
+        <PackageVersion Include="AutoMapper" Version="16.3.0" />
+        <PackageVersion Include="FluentValidation" Version="12.2.0" />
+        <PackageVersion Include="FluentValidation.DependencyInjectionExtensions" Version="12.2.0" />
+        <PackageVersion Include="MediatR" Version="14.3.0" />
+
+        <!-- EF Core and Identity -->
+        <PackageVersion Include="Microsoft.EntityFrameworkCore" Version="10.0.14" />
+        <PackageVersion Include="Microsoft.EntityFrameworkCore.Design" Version="10.0.14" />
+        <PackageVersion Include="Microsoft.EntityFrameworkCore.SqlServer" Version="10.0.14" />
+        <PackageVersion Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="10.0.14" />
+        <PackageVersion Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="10.0.14" />
+
+        <!-- Transitive pins: patched versions of packages pulled in by the SQL Server provider -->
+        <PackageVersion Include="System.Security.Cryptography.Pkcs" Version="10.0.14" />
+    </ItemGroup>
+
+</Project>
