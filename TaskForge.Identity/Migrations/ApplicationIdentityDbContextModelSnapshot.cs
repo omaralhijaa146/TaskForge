@@ -43,7 +43,7 @@ namespace TaskForge.Identity.Migrations
 
                     b.HasIndex("RoleId");
 
-                    b.ToTable("AspNetRoleClaims", (string)null);
+                    b.ToTable("TFRoleClaims", (string)null);
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserClaim<System.Guid>", b =>
@@ -67,7 +67,7 @@ namespace TaskForge.Identity.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("AspNetUserClaims", (string)null);
+                    b.ToTable("TFUserClaims", (string)null);
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserLogin<System.Guid>", b =>
@@ -88,7 +88,7 @@ namespace TaskForge.Identity.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("AspNetUserLogins", (string)null);
+                    b.ToTable("TFUserLogins", (string)null);
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserRole<System.Guid>", b =>
@@ -103,7 +103,7 @@ namespace TaskForge.Identity.Migrations
 
                     b.HasIndex("RoleId");
 
-                    b.ToTable("AspNetUserRoles", (string)null);
+                    b.ToTable("TFUserRoles", (string)null);
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<System.Guid>", b =>
@@ -122,7 +122,7 @@ namespace TaskForge.Identity.Migrations
 
                     b.HasKey("UserId", "LoginProvider", "Name");
 
-                    b.ToTable("AspNetUserTokens", (string)null);
+                    b.ToTable("TFUserTokens", (string)null);
                 });
 
             modelBuilder.Entity("TaskForge.Identity.Models.Roles.ApplicationRole", b =>
@@ -150,7 +150,7 @@ namespace TaskForge.Identity.Migrations
                         .HasDatabaseName("RoleNameIndex")
                         .HasFilter("[NormalizedName] IS NOT NULL");
 
-                    b.ToTable("AspNetRoles", (string)null);
+                    b.ToTable("TFRoles", (string)null);
                 });
 
             modelBuilder.Entity("TaskForge.Identity.Models.Users.ApplicationUser", b =>
@@ -235,7 +235,7 @@ namespace TaskForge.Identity.Migrations
                     b.HasIndex("FirstName", "LastName")
                         .HasDatabaseName("IX_FirstName_LastName");
 
-                    b.ToTable("AspNetUsers", (string)null);
+                    b.ToTable("TFUsers", (string)null);
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<System.Guid>", b =>

@@ -8,6 +8,8 @@ public class ApplicationUserConfigurations:IEntityTypeConfiguration<ApplicationU
 {
     public void Configure(EntityTypeBuilder<ApplicationUser> builder)
     {
+        builder.ToTable("Users");
+
         builder.Property(x => x.FirstName).IsRequired().HasMaxLength(50);
         builder.Property(x => x.LastName).IsRequired().HasMaxLength(50);
         builder.HasIndex(x=>x.FirstName).HasDatabaseName("IX_FirstName");

@@ -8,17 +8,16 @@ namespace TaskForge.Identity;
 
 public static class IdentityServiceRegistration
 {
-    public static IServiceCollection AddIdentityServices(this IServiceCollection services, IConfiguration configuration)
+    public static IServiceCollection AddIdentityServices(this IServiceCollection services, IConfiguration configuration,bool isDevelopment=false)
     {
         var connectionString = configuration.GetConnectionString("DbConnectionString");
+        
         services.AddDbContext<ApplicationIdentityDbContext>(options =>
-        {
-            options.UseSqlServer(connectionString,b=>b.MigrationsHistoryTable("__IdentityMigrationsHistory"));
-            
-        });
+            options.UseTaskForgeSqlServer(connectionString, "__IdentityMigrationsHistory"));
+
         services.AddIdentityCore<ApplicationUser>()
             .AddRoles<ApplicationRole>()
             .AddEntityFrameworkStores<ApplicationIdentityDbContext>();
         return services;
-    } 
+    }
 }

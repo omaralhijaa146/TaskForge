@@ -30,7 +30,7 @@ namespace TaskForge.EntityFrameworkCore.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Projects");
+                    b.ToTable("TFProjects");
                 });
 
             modelBuilder.Entity("TaskForge.Domain.Projects.ProjectMembers.ProjectMember", b =>
@@ -43,7 +43,7 @@ namespace TaskForge.EntityFrameworkCore.Migrations
 
                     b.HasKey("ProjectId", "UserId");
 
-                    b.ToTable("ProjectMembers");
+                    b.ToTable("TFProjectMembers");
                 });
 
             modelBuilder.Entity("TaskForge.Domain.Tags.Tag", b =>
@@ -54,7 +54,7 @@ namespace TaskForge.EntityFrameworkCore.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Tags");
+                    b.ToTable("TFTags");
                 });
 
             modelBuilder.Entity("TaskForge.Domain.Tasks.TaskItems.TaskItem", b =>
@@ -65,7 +65,7 @@ namespace TaskForge.EntityFrameworkCore.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Tasks");
+                    b.ToTable("TFTasks");
                 });
 #pragma warning restore 612, 618
         }
