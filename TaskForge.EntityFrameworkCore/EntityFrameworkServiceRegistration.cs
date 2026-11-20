@@ -2,6 +2,7 @@
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using TaskForge.EntityFrameworkCore.DbContexts;
+using TaskForge.EntityFrameworkCore.Shared;
 
 namespace TaskForge.EntityFrameworkCore;
 
@@ -11,11 +12,16 @@ public static class EntityFrameworkServiceRegistration
     {
         var connectionString = configuration.GetConnectionString("DbConnectionString");
         
-        services.AddDbContext<ApplicationWriteDbContext>(options => options.UseTaskForgeSqlServer(connectionString).EnableDevelopmentLogging(isDevelopment));
+        services.AddDbContext<ApplicationWriteDbContext>((sp,options) => options
+            .UseTaskForgeSqlServer(connectionString)
+            .EnableDevelopmentLogging(isDevelopment)
+            .UseTaskForgeInterceptors(sp));
         
         services.AddDbContext<ApplicationReadDbContext>(options => options
-            .UseTaskForgeSqlServer(connectionString,"__Application_Migrations")
+            .UseTaskForgeSqlServer(connectionString)
             .UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking));
+
+        
         
         return services;
     }

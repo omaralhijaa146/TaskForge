@@ -1,4 +1,3 @@
-﻿using System.Reflection;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using TaskForge.EntityFrameworkCore.Shared;
@@ -11,8 +10,9 @@ public class ApplicationIdentityDbContext:IdentityDbContext<ApplicationUser,Appl
 {
     public ApplicationIdentityDbContext(DbContextOptions<ApplicationIdentityDbContext> options):base(options)
     {
-        
+
     }
+
     protected override void OnModelCreating(ModelBuilder builder)
     {
         base.OnModelCreating(builder);

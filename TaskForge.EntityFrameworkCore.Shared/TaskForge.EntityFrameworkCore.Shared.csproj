@@ -12,4 +12,8 @@
       <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" />
     </ItemGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\TaskForge.Domain.Shared\TaskForge.Domain.Shared.csproj" />
+    </ItemGroup>
+
 </Project>

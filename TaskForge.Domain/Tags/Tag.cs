@@ -1,8 +1,7 @@
-﻿using TaskForge.Domain.Shared;
+using TaskForge.Domain.Audits;
 
 namespace TaskForge.Domain.Tags;
 
-public class Tag:IEntity<Guid>
+public class Tag : AuditedEntity
 {
-    public Guid Id { get; set; }
 }

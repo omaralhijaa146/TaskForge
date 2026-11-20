@@ -1,4 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 using TaskForge.Domain.Projects;
 using TaskForge.EntityFrameworkCore.Shared;
 using TaskForge.Domain.Projects.ProjectMembers;
@@ -23,7 +23,7 @@ public abstract class ApplicationDbContextBase:DbContext
     {
         base.OnModelCreating(modelBuilder);
         modelBuilder.ApplyConfigurationsFromAssembly(typeof(ApplicationDbContextBase).Assembly);
-        
+
         modelBuilder.ApplyTablePrefix(TaskForgeDbProperties.DbTablePrefix);
     }
 }
