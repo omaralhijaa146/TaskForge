@@ -1,4 +1,3 @@
-using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
 using TaskForge.Domain.Shared.Audits;
 
@@ -34,35 +33,6 @@ internal static class EntityEntryAuditExtensions
         ProtectCreationStamps(entry);
     }
 
-    internal static void ApplyDeletionAudit(this EntityEntry entry, AuditStamp stamp)
-    {
-        // Not soft-deletable, so this stays a hard DELETE. Property modification flags
-        // play no part in a DELETE command, so there is nothing to protect here.
-        if (entry.Entity is not IHasSoftDelete softDeleted)
-        {
-            return;
-        }
-
-        entry.State = EntityState.Modified;
-        softDeleted.IsDeleted = true;
-
-        if (entry.Entity is IHasDeletionTime deletionTime)
-        {
-            deletionTime.DeletionTime = stamp.Now;
-        }
-
-        if (entry.Entity is IHasDeletedBy deletedBy)
-        {
-            deletedBy.DeletedBy = stamp.UserId;
-        }
-
-        // Switching state marks every property modified, so narrow the UPDATE back to
-        // the deletion columns: creation stamps are immutable, and a soft delete is
-        // recorded as a deletion rather than a modification.
-        ProtectCreationStamps(entry);
-        ProtectModificationStamps(entry);
-    }
-
     private static void ProtectCreationStamps(EntityEntry entry)
     {
         if (entry.Entity is IHasCreationTime)
@@ -73,19 +43,6 @@ internal static class EntityEntryAuditExtensions
         if (entry.Entity is IHasCreatedBy)
         {
             entry.Property(nameof(IHasCreatedBy.CreatedBy)).IsModified = false;
-        }
-    }
-
-    private static void ProtectModificationStamps(EntityEntry entry)
-    {
-        if (entry.Entity is IHasModificationTime)
-        {
-            entry.Property(nameof(IHasModificationTime.ModificationTime)).IsModified = false;
-        }
-
-        if (entry.Entity is IHasModifiedBy)
-        {
-            entry.Property(nameof(IHasModifiedBy.ModifiedBy)).IsModified = false;
         }
     }
 }

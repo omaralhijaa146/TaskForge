@@ -52,10 +52,6 @@ internal sealed class AuditingSaveChangesInterceptor : SaveChangesInterceptor
                 case EntityState.Modified:
                     entry.ApplyModificationAudit(stamp);
                     break;
-
-                case EntityState.Deleted:
-                    entry.ApplyDeletionAudit(stamp);
-                    break;
             }
         }
     }
